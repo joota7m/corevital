@@ -1,224 +1,786 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Vigor Peak | O Truque do Sal Celta</title>
-    <meta name="description" content="Descubra o protocolo natural que está ajudando milhares de homens a recuperar a vitalidade. O truque do Sal Celta.">
+    <title>Core Vital | Salud Natural</title>
+    <meta name="description" content="Descubre el protocolo natural que está ayudando a miles de hombres a recuperar su vitalidad. Método revelado por el Dr. Markus.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #ffffff; color: #333; overflow-x: hidden; }
-        
-        .health-header { background: #c62120; padding: 16px 0; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15); position: sticky; top: 0; z-index: 100; }
-        .health-header h1 { color: white; font-size: 30px; font-weight: 900; letter-spacing: 2px; margin-bottom: 0px; }
-        
-        .ticker-container { background: #c62120; color: white; padding: 10px 0; overflow: hidden; position: relative; border-top: 1px solid rgba(255,255,255,0.2); }
-        .ticker-content { display: flex; animation: scroll-left 25s linear infinite; white-space: nowrap; font-size: 13px; font-weight: 600; padding: 0 16px; }
-        @keyframes scroll-left { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        .ticker-item { display: inline-flex; align-items: center; margin-right: 40px; gap: 8px; }
-        .ticker-dot { width: 4px; height: 4px; background: white; border-radius: 50%; }
-        
-        .container { max-width: 700px; margin: 0 auto; padding: 0 16px; }
-        .main-content { padding: 20px 0; }
-        
-        .author-block { padding: 16px 0; border-bottom: 1px solid #eee; margin-bottom: 16px; }
-        .author-name { font-weight: 700; font-size: 14px; color: #333; }
-        .author-meta { font-size: 12px; color: #888; margin-top: 4px; }
-        
-        .article-headline { font-size: clamp(24px, 6vw, 34px); font-weight: 900; color: #000; line-height: 1.2; margin: 16px 0 12px; text-align: left; }
-        .article-subheadline { font-size: 16px; font-weight: 600; color: #c62120; line-height: 1.5; margin-bottom: 24px; }
-        
-        .tsl-body { font-size: 18px; line-height: 1.6; color: #111; margin-top: 20px; }
-        .tsl-body p { margin-bottom: 20px; }
-        .tsl-body h2 { font-size: 24px; font-weight: 900; margin: 36px 0 16px; color: #000; border-bottom: 2px solid #c62120; padding-bottom: 8px; display: inline-block;}
-        .tsl-body strong { color: #000; font-weight: 800; background-color: #fffde7; padding: 0 4px;}
-        .tsl-body ul { margin-bottom: 24px; padding-left: 20px; }
-        .tsl-body li { margin-bottom: 12px; }
-        
-        /* CTA BUTTON */
-        .article-cta { background: linear-gradient(135deg, #28a745 0%, #218838 100%); color: white; padding: 20px 28px; border: none; border-radius: 8px; font-size: 18px; font-weight: 900; cursor: pointer; font-family: 'Plus Jakarta Sans', sans-serif; box-shadow: 0 4px 14px rgba(40, 167, 69, 0.3); width: 100%; margin: 32px 0 16px; transition: all 0.15s; text-transform: uppercase; letter-spacing: 0.5px; animation: pulse 2s infinite; }
-        .article-cta:hover { transform: scale(1.02); }
-        .article-cta:active { transform: scale(0.98); }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(40, 167, 69, 0); } 100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); } }
-        .cta-note { text-align: center; font-size: 13px; color: #666; margin-bottom: 30px; font-weight: 600; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #ffffff;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* HEADER - HEALTH STYLE */
+        .health-header {
+            background: #c62120;
+            padding: 16px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .health-header h1 {
+            color: white;
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        /* TICKER - ANIMATED NEWS */
+        .ticker-container {
+            background: #c62120;
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ticker-content {
+            display: flex;
+            animation: scroll-left 25s linear infinite;
+            white-space: nowrap;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 0 16px;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 40px;
+            gap: 8px;
+        }
+
+        .ticker-dot {
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            padding: 20px 0;
+        }
+
+        /* AUTHOR BLOCK */
+        .author-block {
+            padding: 16px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 16px;
+        }
+
+        .author-name {
+            font-weight: 700;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .author-meta {
+            font-size: 11px;
+            color: #888;
+            margin-top: 4px;
+        }
+
+        /* HEADLINE */
+        .article-headline {
+            font-size: clamp(22px, 6vw, 28px);
+            font-weight: 900;
+            color: #000;
+            line-height: 1.15;
+            margin: 16px 0 12px;
+            text-align: left;
+        }
+
+        .article-subheadline {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        /* VIDEO SECTION */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+            overflow: hidden;
+            background: transparent;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .video-wrapper vturb-smartplayer,
+        .video-wrapper iframe,
+        .video-wrapper video {
+            width: 100% !important;
+            border: none !important;
+            border-radius: 12px !important;
+        }
+
+        .video-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .video-play {
+            background: #ffc107;
+            color: #000;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+        }
+
+        /* LOGOS */
+        .credibility-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            padding: 24px 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .logo-item {
+            font-weight: 900;
+            font-size: 11px;
+            color: #333;
+            opacity: 0.8;
+            letter-spacing: 0.3px;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .logo-item.nyt {
+            border: 2px solid #000;
+            padding: 4px 8px;
+            font-size: 10px;
+        }
+
         /* COMMENTS SECTION */
-        .comments-header { font-size: 20px; font-weight: 900; color: #000; margin: 40px 0 20px; border-top: 1px solid #eee; padding-top: 24px;}
-        .comments-section { background: #fff; padding: 0; margin-bottom: 24px; }
-        .comment { display: flex; gap: 12px; margin-bottom: 20px; }
-        .comment-avatar { width: 44px; height: 44px; border-radius: 50%; background-color: #e4e6eb; background-size: cover; background-position: center; flex-shrink: 0;}
-        .comment-avatar.av1 { background-image: url('https://randomuser.me/api/portraits/men/32.jpg'); }
-        .comment-avatar.av2 { background-image: url('https://randomuser.me/api/portraits/men/45.jpg'); }
-        .comment-avatar.av3 { background-image: url('https://randomuser.me/api/portraits/women/44.jpg'); }
-        .comment-content { flex: 1; }
-        .comment-bubble { background: #f0f2f5; border-radius: 18px; padding: 12px 16px; display: inline-block; }
-        .comment-author { font-weight: 700; font-size: 15px; color: #050505; margin-bottom: 4px; }
-        .comment-text { font-size: 15px; color: #050505; line-height: 1.4; }
-        .comment-footer { display: flex; gap: 16px; font-size: 12px; color: #65676b; font-weight: 600; margin-top: 6px; margin-left: 12px; }
-        
-        footer { background: #111; color: #888; padding: 40px 20px; text-align: center; font-size: 12px; line-height: 1.6; margin-top: 40px; }
-        .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; }
-        .footer-link { cursor: pointer; color: #ccc; font-weight: 600;}
-        .footer-copyright { margin-bottom: 12px; font-weight: 700;}
-        
-        @media (min-width: 769px) { .container { max-width: 680px; } }
+        .comments-header {
+            font-size: 16px;
+            font-weight: 700;
+            color: #050505;
+            margin: 28px 0 16px;
+        }
+
+        .comments-section {
+            background: #fff;
+            border: 1px solid #ced0d4;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+        }
+
+        /* FACEBOOK STYLE COMMENTS */
+        .comment {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .comment:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .comment.reply {
+            margin-left: 44px; /* Offset for avatar */
+        }
+
+        .comment-avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background-color: #e4e6eb;
+        }
+
+        .comment-avatar.av1 { background: url('https://randomuser.me/api/portraits/men/32.jpg') center/cover; }
+        .comment-avatar.av2 { background: url('https://randomuser.me/api/portraits/men/45.jpg') center/cover; }
+        .comment-avatar.av3 { background: url('https://randomuser.me/api/portraits/men/22.jpg') center/cover; }
+        .comment-avatar.av4 { background: url('https://randomuser.me/api/portraits/men/28.jpg') center/cover; }
+        .comment-avatar.av5 { background: url('https://randomuser.me/api/portraits/men/50.jpg') center/cover; }
+        .comment-avatar.av6 { background: url('https://randomuser.me/api/portraits/women/44.jpg') center/cover; }
+        .comment-avatar.av7 { background: url('https://randomuser.me/api/portraits/men/60.jpg') center/cover; }
+        .comment-avatar.av8 { background: url('https://randomuser.me/api/portraits/men/33.jpg') center/cover; }
+
+        .comment-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1;
+        }
+
+        .comment-bubble-wrapper {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+        }
+
+        .comment-bubble {
+            background: #f0f2f5;
+            border-radius: 18px;
+            padding: 9px 12px;
+            display: inline-block;
+        }
+
+        .comment-author {
+            font-weight: 600;
+            font-size: 13px;
+            color: #385898;
+            margin-bottom: 2px;
+            cursor: pointer;
+        }
+
+        .comment-author:hover {
+            text-decoration: underline;
+        }
+
+        .comment-text {
+            font-size: 15px;
+            color: #050505;
+            line-height: 1.3333;
+            word-wrap: break-word;
+        }
+
+        .comment-reactions {
+            position: absolute;
+            bottom: -9px;
+            right: 0px; 
+            background: #fff;
+            padding: 2px 4px 2px 2px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+            color: #65676b;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            z-index: 2;
+        }
+
+        .comment-footer {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            color: #65676b;
+            font-weight: 600;
+            padding-left: 12px;
+            margin-top: 4px;
+            align-items: center;
+        }
+
+        .comment-footer-item {
+            cursor: pointer;
+            transition: color 0.1s;
+        }
+
+        .comment-footer-item:hover {
+            color: #050505;
+            text-decoration: underline;
+        }
+
+        /* NO MORE COMMENTS */
+        .no-more-comments {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #888;
+            margin: 20px 0;
+        }
+
+        /* CTA BUTTON */
+        .article-cta {
+            background: linear-gradient(135deg, #c62120 0%, #8b1616 100%);
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            box-shadow: 0 4px 14px rgba(198, 33, 32, 0.25);
+            width: 100%;
+            margin: 24px 0;
+            transition: all 0.15s;
+        }
+
+        .article-cta:active {
+            transform: scale(0.97);
+            box-shadow: 0 3px 10px rgba(198, 33, 32, 0.2);
+        }
+
+        .cta-note {
+            text-align: center;
+            font-size: 10px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER */
+        <footer>
+            background: #1a1a1a;
+            color: #999;
+            padding: 20px 16px;
+            text-align: center;
+            font-size: 11px;
+            line-height: 1.6;
+            margin-top: 30px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .footer-link {
+            cursor: pointer;
+            color: #ffc107;
+            font-weight: 700;
+        }
+
+        .footer-copyright {
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .footer-disclaimer {
+            font-size: 10px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 769px) {
+            .container {
+                max-width: 600px;
+            }
+
+            .article-headline {
+                font-size: 32px;
+            }
+        }
+
+        /* LOCKED BUTTON STATE */
+        .locked-item, .locked-btn, .locked-btn + .cta-note {
+            display: none !important;
+        }
     </style>
+    <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+    <link rel="preload" href="https://scripts.converteai.net/677a7a7b-4c62-4579-97e3-278cb91437cd/players/69e8f45d05c3ed4453dc68d0/v4/player.js" as="script">
+    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/677a7a7b-4c62-4579-97e3-278cb91437cd/69e8f44788365845bd023fc9/main.m3u8" as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+    <!-- UTMify Script -->
+    <script>
+      window.pixelId = "69e8fac3d0ccc73d7b1b561e";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1499558578450606');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1499558578450606&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
     <!-- HEADER -->
     <div class="health-header">
-        <h1>SAÚDE & CIÊNCIA</h1>
+        <h1>SALUD</h1>
     </div>
-    
+
     <!-- TICKER -->
     <div class="ticker-container">
         <div class="ticker-content">
-            <div class="ticker-item"><span class="ticker-dot"></span><span>Especialistas analisam o 'truque do sal' que está revolucionando a saúde masculina</span></div>
-            <div class="ticker-item"><span class="ticker-dot"></span><span>Estudo em Heidelberg revela a verdadeira causa da falha na hora H</span></div>
-            <div class="ticker-item"><span class="ticker-dot"></span><span>Nova descoberta natural substitui métodos ultrapassados com sucesso</span></div>
+            <div class="ticker-item">
+                <span class="ticker-dot"></span>
+                <span>Especialistas analizan el protocolo natural del Dr. Markus que está llamando la atención de hombres mayores de 40 años</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-dot"></span>
+                <span>Investigación revela método natural que está ayudando a miles de hombres a recuperar su rendimiento sin fármacos</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-dot"></span>
+                <span>El Dr. Markus presenta un enfoque innovador que está generando debate en la comunidad médica</span>
+            </div>
+            <div class="ticker-item">
+                <span class="ticker-dot"></span>
+                <span>Descubrimiento reciente podría cambiar la forma en que hombres mayores enfrentan problemas de rendimiento</span>
+            </div>
         </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div class="container">
-        <div class="main-content">
+    <!-- PAGE 1: VSL -->
+    <div id="page1" style="display: block;">
+        <div class="container">
+            <div class="main-content">
+            <!-- AUTHOR BLOCK -->
             <div class="author-block">
-                <div class="author-name">Por Dr. Markus Schneider</div>
-                <div class="author-meta">Atualizado há 18 minutos</div>
+                <div class="author-name">Por Dr. Markus</div>
+                <div class="author-meta">Actualizado hace 18 minutos</div>
             </div>
 
-            <h1 class="article-headline">O simples 'truque do sal celta' de 15 segundos que está ativando a firmeza masculina... mesmo que nada mais tenha funcionado</h1>
-            <h2 class="article-subheadline">Descubra como limpar a "Testosterona Tóxica" do seu corpo e reativar a sua célula da ereção naturalmente.</h2>
-
-            <div class="tsl-body">
-                <p><strong>Se você nasceu antes de 1980, preste muita atenção.</strong> O que você vai ler a seguir não é sobre um tempero qualquer da sua cozinha.</p>
-                
-                <p>É sobre um antigo 'truque' usado há séculos na costa da Bretanha Francesa...</p>
-                
-                <p>Recentemente, cientistas do Instituto Max Planck em Heidelberg e de Harvard descobriram algo assustador sobre o corpo masculino moderno:</p>
-                
-                <p style="border-left: 4px solid #c62120; padding-left: 16px; font-style: italic; color: #444; background: #f9f9f9; padding: 16px; font-weight: 500;">
-                "Nós descobrimos que este truque pode ativar a célula mágica da ereção. A célula que decide quando o seu pênis fica duro e quão duro ele fica."
-                </p>
-
-                <p>Em menos de 15 segundos por dia, este simples truque matinal limpa o 'veneno' invisível que está sabotando suas ereções, e força o seu corpo a bombear sangue e testosterona pura de volta para o seu membro.</p>
-                
-                <p>O resultado? Ereções de aço, sob demanda, e um aumento visível no tamanho e na espessura em questão de semanas.</p>
-                
-                <p>Sem pílulas azuis que causam infarto. Sem bombas que machucam. Sem injeções constrangedoras.</p>
-                
-                <h2>A Verdadeira Causa da Disfunção</h2>
-                <p>A verdade chocante é que a impotência <strong>não tem nada a ver com a sua idade.</strong> Não é culpa genética. Não é o estresse.</p>
-                
-                <p>A culpa é da <strong>'Testosterona Tóxica'</strong>.</p>
-                
-                <p>Desde a década de 1970, nosso ambiente foi inundado com produtos químicos. Pesticidas como o glifosato na sua comida, agrotóxicos escondidos nas frutas 'perfeitas' do supermercado, hormônios no leite, e vacinas modernas.</p>
-                
-                <p>Essas toxinas entram no seu sangue e se acumulam em um lugar muito específico do seu corpo: nas <strong>células intersticiais dos seus testículos</strong>.</p>
-                
-                <p>Ao longo dos anos, essas células ficam tão entupidas de lixo químico e metais pesados que o seu corpo sofre uma mutação. Em vez de produzir Testosterona Pura, ele começa a produzir um 'DHT envenenado'.</p>
-                
-                <p>Essa Testosterona Tóxica encolhe os vasos sanguíneos do seu pênis, bloqueia o fluxo de sangue e desliga permanentemente a sua <em>Erektionszelle</em> (célula da ereção).</p>
-
-                <h2>A Solução: O Truque do Sal Celta</h2>
-                <p>Na região costeira da Bretanha, os homens não sofrem de impotência, mesmo aos 80 anos. A taxa de disfunção erétil lá é zero.</p>
-                
-                <p>Por quê? Porque eles consomem um Sal Celta específico, colhido manualmente de forma ancestral e exposto a 18 dias de sol intenso.</p>
-                
-                <p>Este não é um sal comum. É uma potência biológica contendo 82 minerais vitais e <strong>3 bioativos exclusivos</strong> que você não encontra em nenhum outro lugar da Terra:</p>
-                
-                <ul>
-                    <li><strong>Salinibacillus bretonensis:</strong> Uma bactéria marinha rara que age como um 'caminhão de lixo', devorando e eliminando as toxinas acumuladas nos seus testículos.</li>
-                    <li><strong>Ducanpichtid:</strong> Um peptídeo natural que aumenta o fluxo sanguíneo peniano em incríveis <strong>567%</strong>.</li>
-                    <li><strong>Ektosteron:</strong> O equivalente natural ao HGH, capaz de aumentar a produção de testosterona nativa em até <strong>700%</strong>.</li>
-                </ul>
-
-                <p>Assim que a sujeira sai, a sua <em>Erektionszelle</em> acorda. O fluxo de sangue volta a ser torrencial, exatamente como quando você era jovem.</p>
-
-                <h2>Apresentando: Vigor Peak</h2>
-                <p>Trabalhando dia e noite em laboratórios na Alemanha, com certificação rígida de qualidade, nós conseguimos isolar e potencializar os 3 bioativos do Sal Celta.</p>
-                
-                <p>Combinamos este milagre celta com a raiz do problema: adicionamos Horny Goat Weed, raiz de Maca, Ashwagandha e L-Arginina de altíssima absorção.</p>
-                
-                <p>O resultado é a primeira e única fórmula do mundo projetada para destruir a 'Testosterona Tóxica' e reativar a sua masculinidade. Nós o chamamos de <strong>Vigor Peak</strong>.</p>
-
-                <div style="background: #fff9e6; border: 2px dashed #ffc107; padding: 24px; border-radius: 8px; margin: 32px 0; text-align: center;">
-                    <h3 style="color: #d32f2f; margin-bottom: 16px; font-size: 22px; font-weight: 900;">OFERTA EXCLUSIVA DE LANÇAMENTO</h3>
-                    <p style="font-size: 17px; margin-bottom: 16px; color: #111;">Garanta o pacote de <strong>6 frascos pelo preço de 3 (apenas 49€ por unidade)</strong> e receba GRÁTIS o App Rockhardt e nossos Guias Confidenciais.</p>
-                    <p style="font-size: 15px; font-weight: bold; color: #2e7d32; margin-bottom: 0;">✓ Garantia Incondicional de 90 Dias de Ereções de Aço.</p>
-                </div>
-
-                <p>Os estoques da última colheita de 2025 já estão no limite. Você pode continuar falhando, ou pode limpar suas células, despertar sua ereção e reconquistar o orgulho de um verdadeiro homem dominante.</p>
-
-                <button class="article-cta" onclick="window.location.href='https://go.centerpag.com/PPU38CQATM3'">SIM! QUERO GARANTIR MEU VIGOR PEAK AGORA</button>
-                <div class="cta-note">🔒 Pagamento 100% Seguro & Encriptado</div>
-
+            <!-- HEADLINE -->
+            <div class="article-headline">
+                “El simple ritual de 5 segundos que está activando la firmeza masculina… aunque nada más te haya funcionado antes”
+            </div>
+            <div class="article-subheadline">
+                “Una secuencia rápida que puedes aplicar hoy mismo para mejorar el flujo donde más importa — sin pastillas, sin recetas y sin esfuerzo complicado”
             </div>
 
-            <!-- COMMENTS -->
-            <div class="comments-header">Comentários (18)</div>
-            <div class="comments-section">
-                <div class="comment">
-                    <div class="comment-avatar av1"></div>
-                    <div class="comment-content">
-                        <div class="comment-bubble">
-                            <div class="comment-author">Heinrich Müller</div>
-                            <div class="comment-text">Eu achei que minha vida sexual tinha acabado aos 51 anos. Comecei a usar o Vigor Peak faz duas semanas e hoje minha esposa sorri o dia inteiro. É como se eu tivesse meus 20 anos de volta, impressionante!</div>
-                        </div>
-                        <div class="comment-footer">
-                            <span>Responder</span> • <span>Curtir</span> • <span>Há 2 horas</span>
-                        </div>
+            <!-- VIDEO -->
+            <div class="video-wrapper">
+                <vturb-smartplayer id="vid-69e8f45d05c3ed4453dc68d0" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+                <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/677a7a7b-4c62-4579-97e3-278cb91437cd/players/69e8f45d05c3ed4453dc68d0/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+            </div>
+
+            <!-- LOGOS -->
+            <div class="credibility-logos" style="padding: 10px 0; background: transparent; border: none; margin-bottom: 20px;">
+                <img src="/assets/logos.jpg" alt="Visto en The New York Times, CBS, ABC, FOX, CNN" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+            </div>
+
+            <!-- CTA BUTTON -->
+            <button id="vslBtn1" class="article-cta locked-btn" onclick="checkout();" style="position: relative; z-index: 9999;">QUIERO PROBAR EL RITUAL AHORA</button>
+            <div class="cta-note" style="position: relative; z-index: 9999;">✓ 100% Garantía | Sin riesgo</div>
+
+
+
+            <!-- PRODUCT SECTION -->
+            <div class="locked-item" style="background: #f9f9f9; border: 1px solid #eee; border-radius: 8px; padding: 24px 16px; margin: 32px 0;">
+                
+                <h2 style="font-size: 24px; font-weight: 900; color: #000; text-align: center; margin-bottom: 8px; line-height: 1.2;">
+                    El Protocolo Secreto del Dr. Markus que está cambiando la vida de miles de hombres
+                </h2>
+                <h3 style="font-size: 15px; font-weight: 400; color: #444; text-align: center; margin-bottom: 24px; line-height: 1.5;">
+                    Una sal natural descubierta fuera del sistema médico que reactiva tu rendimiento masculino — sin pastillas, sin receta, sin efectos secundarios
+                </h3>
+
+                <!-- Price Box -->
+                <div style="background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%); padding: 18px 14px; border-radius: 7px; margin-bottom: 24px; text-align: center; box-shadow: 0 4px 12px rgba(255, 193, 7, 0.2);">
+                    <div style="font-size: 15px; color: #333; font-weight: 600; margin-bottom: 4px; text-decoration: line-through;">Precio Original: $29</div>
+                    <div style="display: flex; justify-content: center; align-items: baseline; gap: 8px;">
+                        <span style="font-size: 42px; font-weight: 900; color: #000; letter-spacing: -1px;">$9,57</span>
+                    </div>
+                    <button onclick="checkout();" style="cursor: pointer; border: none; font-size: 15px; color: #0a7a3b; margin-top: 10px; margin-bottom: 2px; font-weight: 900; background: #fff; display: inline-block; padding: 10px 24px; border-radius: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: transform 0.2s;">¡ACCESO INMEDIATO!</button>
+                    <div style="font-size: 13px; color: #000; margin-top: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 4px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        Pago 100% seguro y encriptado
                     </div>
                 </div>
 
-                <div class="comment">
-                    <div class="comment-avatar av2"></div>
-                    <div class="comment-content">
-                        <div class="comment-bubble">
-                            <div class="comment-author">Paul Schmidt</div>
-                            <div class="comment-text">Tenho 77 anos e tive problemas severos de próstata. Depois que testei esse truque do sal celta, voltei a ter ereções matinais doloridas de tão rígidas. Recomendo a todos os homens.</div>
-                        </div>
-                        <div class="comment-footer">
-                            <span>Responder</span> • <span>Curtir</span> • <span>Há 5 horas</span>
-                        </div>
+                <!-- Benefits Bullets -->
+                <div style="background: #fff; padding: 16px; border-radius: 7px; margin-bottom: 24px; border: 1px solid #eee;">
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="font-size: 13px; color: #444; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.4;">
+                            <span style="color: #2e7d32; font-size: 15px; flex-shrink: 0;">✅</span> El ritual exacto de 5 segundos explicado paso a paso
+                        </li>
+                        <li style="font-size: 13px; color: #444; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.4;">
+                            <span style="color: #2e7d32; font-size: 15px; flex-shrink: 0;">✅</span> La forma correcta de aplicarlo para mejores resultados
+                        </li>
+                        <li style="font-size: 13px; color: #444; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.4;">
+                            <span style="color: #2e7d32; font-size: 15px; flex-shrink: 0;">✅</span> Errores comunes que bloquean la firmeza (y cómo evitarlos)
+                        </li>
+                        <li style="font-size: 13px; color: #444; margin-bottom: 0; display: flex; align-items: flex-start; gap: 8px; line-height: 1.4;">
+                            <span style="color: #2e7d32; font-size: 15px; flex-shrink: 0;">✅</span> Acceso inmediato, privado y fácil de seguir
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Urgency -->
+                <div style="border-left: 4px solid #c62120; background: #fff5f5; padding: 12px; margin-bottom: 24px; border-radius: 0 4px 4px 0;">
+                    <div style="color: #c62120; font-weight: 800; font-size: 13px; line-height: 1.5;">
+                        ⚠️ ATENCIÓN: Este precio especial de lanzamiento es exclusivo para quienes vieron este video hoy. El Dr. Markus no garantiza que este acceso siga disponible a este valor mañana.
                     </div>
                 </div>
 
-                <div class="comment">
-                    <div class="comment-avatar av3"></div>
-                    <div class="comment-content">
-                        <div class="comment-bubble">
-                            <div class="comment-author">Laura Almeida</div>
-                            <div class="comment-text">Comprei para o meu marido porque nosso casamento estava em crise por causa disso. A diferença é surreal. Ele está muito mais confiante e a nossa intimidade foi salva. Obrigada Dr. Markus!</div>
-                        </div>
-                        <div class="comment-footer">
-                            <span>Responder</span> • <span>Curtir</span> • <span>Há 1 dia</span>
-                        </div>
+                <!-- CTA -->
+                <button class="article-cta" onclick="checkout();" style="margin: 0; position: relative; z-index: 9999;">QUIERO PROBAR EL RITUAL AHORA</button>
+
+            </div>
+            <!-- COMMENTS SECTION -->
+            <div class="comments-header">2.103 Comentarios</div>
+            <div class="comments-section" style="padding: 12px 0; border: 1px solid #e5e5e5; border-radius: 8px; background: white;">
+
+            <!-- COMMENT 1 -->
+            <div class="comment">
+                <div class="comment-avatar av1"></div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <div class="comment-author">Juan Morales</div>
+                        <div class="comment-text">Hace 3 años que vengo con este problema. Vi el video ayer y honestamente no creía. Hoy ya noté cambios! Mi esposa está feliz de verdad 😊</div>
+                    </div>
+                    <div class="comment-footer">
+                        <div class="comment-footer-item">👍 Me gusta</div>
+                        <div class="comment-footer-item">💬 Responder</div>
+                        <div class="comment-footer-item">2h</div>
+                    </div>
+                    <div style="font-size: 11px; color: #888; margin-top: 8px;">👍❤️ 312 personas</div>
+                </div>
+            </div>
+
+            <!-- COMMENT 2 -->
+            <div class="comment">
+                <div class="comment-avatar av2"></div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <div class="comment-author">Cristian Rodríguez</div>
+                        <div class="comment-text">Después de 5 años usando Viagra, probé esto. La diferencia es increíble. Natural, funciona mejor y mucho mas barato. No vuelvo atrás.</div>
+                    </div>
+                    <div class="comment-footer">
+                        <div class="comment-footer-item">👍 Me gusta</div>
+                        <div class="comment-footer-item">💬 Responder</div>
+                        <div class="comment-footer-item">1h</div>
+                    </div>
+                    <div style="font-size: 11px; color: #888; margin-top: 8px;">👍❤️ 284 personas</div>
+                </div>
+            </div>
+
+            <!-- COMMENT 3 (WITH REPLY) -->
+            <div class="comment">
+                <div class="comment-avatar av3"></div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <div class="comment-author">Miguel García</div>
+                        <div class="comment-text">Alguien más lo probó? Necesito saber si es verdad lo que dicen...</div>
+                    </div>
+                    <div class="comment-footer">
+                        <div class="comment-footer-item">👍 Me gusta</div>
+                        <div class="comment-footer-item">💬 Responder</div>
+                        <div class="comment-footer-item">58 min</div>
+                    </div>
+                    <div style="font-size: 11px; color: #888; margin-top: 8px;">👍❤️ 89 personas</div>
+                </div>
+            </div>
+
+            <!-- REPLY TO COMMENT 3 -->
+            <div class="comment reply">
+                <div class="comment-avatar av4"></div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <div class="comment-author">Fernando Cortés</div>
+                        <div class="comment-text">Yo lo probé hermano. Es verdad. En 6 días noté cambios serios. Vale la pena intentar.</div>
+                    </div>
+                    <div class="comment-footer">
+                        <div class="comment-footer-item">👍 Me gusta</div>
+                        <div class="comment-footer-item">💬 Responder</div>
+                        <div class="comment-footer-item">45 min</div>
                     </div>
                 </div>
             </div>
 
-            <button class="article-cta" onclick="window.location.href='https://go.centerpag.com/PPU38CQATM3'" style="margin-top: 10px;">QUERO EXPERIMENTAR HOJE COM DESCONTO</button>
-            <div class="cta-note">Envio rápido e embalagem totalmente discreta.</div>
+            <!-- COMMENT 4 -->
+            <div class="comment">
+                <div class="comment-avatar av5"></div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <div class="comment-author">Roberto Pacheco</div>
+                        <div class="comment-text">Como médico me da curiosidad esto. Pero debo admitir que los resultados que veo aqui son consistentes. Algo está funcionando.</div>
+                    </div>
+                    <div class="comment-footer">
+                        <div class="comment-footer-item">👍 Me gusta</div>
+                        <div class="comment-footer-item">💬 Responder</div>
+                        <div class="comment-footer-item">42 min</div>
+                    </div>
+                    <div style="font-size: 11px; color: #888; margin-top: 8px;">👍❤️ 456 personas</div>
+                </div>
+            </div>
 
+            <!-- COMMENT 5 -->
+            <div class="comment">
+                <div class="comment-avatar av6"></div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <div class="comment-author">Laura Pérez</div>
+                        <div class="comment-text">Mi esposo cambió en una semana!! No puedo creer que un protocolo simple haya logrado esto. El Dr. Markus es un genio!</div>
+                    </div>
+                    <div class="comment-footer">
+                        <div class="comment-footer-item">👍 Me gusta</div>
+                        <div class="comment-footer-item">💬 Responder</div>
+                        <div class="comment-footer-item">28 min</div>
+                    </div>
+                    <div style="font-size: 11px; color: #888; margin-top: 8px;">👍❤️ 378 personas</div>
+                </div>
+            </div>
+
+            <!-- COMMENT 6 (WITH REPLY) -->
+            <div class="comment">
+                <div class="comment-avatar av7"></div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <div class="comment-author">Andrés Rivera</div>
+                        <div class="comment-text">¿Alguien sabe si funciona para todos o hay restricciones?</div>
+                    </div>
+                    <div class="comment-footer">
+                        <div class="comment-footer-item">👍 Me gusta</div>
+                        <div class="comment-footer-item">💬 Responder</div>
+                        <div class="comment-footer-item">18 min</div>
+                    </div>
+                    <div style="font-size: 11px; color: #888; margin-top: 8px;">👍❤️ 134 personas</div>
+                </div>
+            </div>
+
+            <!-- REPLY TO COMMENT 6 -->
+            <div class="comment reply">
+                <div class="comment-avatar av8"></div>
+                <div class="comment-content">
+                    <div class="comment-bubble">
+                        <div class="comment-author">Samuel Méndez</div>
+                        <div class="comment-text">Funciona para todos. Yo tenía mucha incredulidad pero los resultados hablan solos. 5 días y diferencia total.</div>
+                    </div>
+                    <div class="comment-footer">
+                        <div class="comment-footer-item">👍 Me gusta</div>
+                        <div class="comment-footer-item">💬 Responder</div>
+                        <div class="comment-footer-item">12 min</div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- NO MORE COMMENTS -->
+            <div class="no-more-comments">
+                Esta publicación ya no recibe comentarios
+            </div>
+
+            <!-- FINAL CTA -->
+            <button id="vslBtn2" class="article-cta locked-btn" onclick="checkout();" style="position: relative; z-index: 9999;">QUIERO PROBAR EL RITUAL AHORA</button>
+            <div class="cta-note" style="position: relative; z-index: 9999;">✓ Compra segura | Garantía completa | Sin riesgo</div>
         </div>
+        </div>
+    </div>
     </div>
 
     <!-- FOOTER -->
     <footer>
         <div class="footer-links">
-            <div class="footer-link">Privacidade</div>
-            <div class="footer-link">Termos de Uso</div>
-            <div class="footer-link">Contato</div>
+            <div class="footer-link" onclick="alert('Política de Privacidad');">Privacidad</div>
+            <div class="footer-link" onclick="alert('Términos de Uso');">Términos</div>
+            <div class="footer-link" onclick="alert('Contacto');">Contacto</div>
         </div>
-        <div class="footer-copyright">© 2026 Vigor Peak</div>
+        <div class="footer-copyright">© 2026 Core Vital</div>
         <div class="footer-disclaimer">
-            Este site não tem vínculo com Facebook, YouTube ou Google. Os resultados não são típicos e podem variar de pessoa para pessoa. Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença.
+            Este sitio no tiene vínculo con Facebook, YouTube o Google. Los resultados no son típicos y pueden variar. Este producto no se destina a diagnosticar, tratar, curar o prevenir enfermedad alguna.
         </div>
     </footer>
+
+    <script>
+        let isVslLocked = true;
+
+        function handleVSLClick() {
+            checkout();
+        }
+
+        function checkout() {
+            window.location.href = 'https://go.centerpag.com/PPU38CQATM3';
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var vturbWatcher = setInterval(function() {
+                if (window.smartplayer && window.smartplayer.instances && window.smartplayer.instances.length > 0) {
+                    var player = window.smartplayer.instances[0].video;
+                    // Libera botões após 390 segundos exatos (6:30)
+                    if (player && player.currentTime >= 390) {
+                        isVslLocked = false;
+                        document.querySelectorAll('.locked-btn, .locked-item').forEach(function(el) {
+                            el.classList.remove('locked-btn', 'locked-item');
+                            if (el.tagName === 'BUTTON') {
+                                el.style.cursor = 'pointer';
+                            }
+                        });
+                        clearInterval(vturbWatcher);
+                    }
+                }
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
